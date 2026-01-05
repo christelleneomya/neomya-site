@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Neomya</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <h1 id="hero_title">Neomya</h1>
+      <p id="hero_subtitle">Votre phrase de valeur ici</p>
+      <a id="hero_button" class="btn" href="#contact">Demander une démo</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="solution">
+      <h2 id="solution_title">Solution</h2>
+      <p id="solution_text">Explique ici ce que fait ton produit.</p>
+    </section>
+
+    <section id="results">
+      <h2 id="results_title">Résultats</h2>
+      <p id="results_text">Explique les bénéfices ou chiffres.</p>
+    </section>
+
+    <section id="fonctionnement">
+      <h2 id="fonctionnement_title">Fonctionnement</h2>
+      <p id="fonctionnement_text">Décris le fonctionnement en 3 étapes.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p id="contact_text">Contactez-nous à christelle@neomya.io</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <small>© <span id="footer_year"></span> Neomya</small>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("footer_year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
