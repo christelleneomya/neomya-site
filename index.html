@@ -45,8 +45,23 @@
   </footer>
 
   <script>
-    document.getElementById("footer_year").textContent = new Date().getFullYear();
-  </script>
+  document.getElementById("footer_year").textContent = new Date().getFullYear();
+
+  async function loadContent() {
+    const res = await fetch("/content/homepage.json");
+    const data = await res.json();
+
+    for (const key in data) {
+      const el = document.getElementById(key);
+      if (el) el.textContent = data[key];
+    }
+
+    const btn = document.getElementById("hero_button");
+    if (btn) btn.textContent = data.hero_button;
+  }
+
+  loadContent();
+</script>
 
 </body>
 </html>
