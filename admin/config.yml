@@ -1,0 +1,30 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "homepage"
+    label: "Homepage"
+    files:
+      - file: "content/homepage.json"
+        label: "Contenu page d'accueil"
+        name: "homepage"
+        format: "json"
+        fields:
+          - { label: "Titre Hero", name: "hero_title", widget: "string" }
+          - { label: "Sous-titre Hero", name: "hero_subtitle", widget: "string" }
+          - { label: "Texte bouton Hero", name: "hero_button", widget: "string" }
+
+          - { label: "Titre Solution", name: "solution_title", widget: "string" }
+          - { label: "Texte Solution", name: "solution_text", widget: "text" }
+
+          - { label: "Titre Résultats", name: "results_title", widget: "string" }
+          - { label: "Texte Résultats", name: "results_text", widget: "text" }
+
+          - { label: "Titre Fonctionnement", name: "fonctionnement_title", widget: "string" }
+          - { label: "Texte Fonctionnement", name: "fonctionnement_text", widget: "text" }
+
+          - { label: "Texte Contact", name: "contact_text", widget: "text" }
