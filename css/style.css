@@ -53,7 +53,7 @@ img { max-width: 100%; display: block; }
   display: flex;
   justify-content: center;
   gap: 38px;
-  font-weight: 700;
+  font-weight: 600;
   color: #0b1f3a;
 }
 .nav a { opacity: 0.9; }
@@ -84,7 +84,7 @@ img { max-width: 100%; display: block; }
   background: #4b63ff;
   color: white;
   border: 0;
-  box-shadow: 0 10px 25px rgba(75,99,255,0.25);
+  box-shadow: 0 14px 35px rgba(75,99,255,0.18);
 }
 .btn-secondary {
   background: transparent;
@@ -92,8 +92,9 @@ img { max-width: 100%; display: block; }
   color: #0b1f3a;
 }
 .btn-small {
-  padding: 12px 20px;
-  font-size: 14px;
+  padding: 12px 22px;
+  font-size: 15px;
+   border-radius: 999px;
 }
 .btn-full {
   width: 100%;
