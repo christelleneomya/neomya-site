@@ -1,0 +1,38 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.container {
+  width: min(900px, 90%);
+  margin: auto;
+}
+
+.header {
+  padding: 80px 0;
+  text-align: center;
+  background: #f3f4f6;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 18px;
+  background: black;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+section {
+  padding: 50px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.footer {
+  padding: 30px 0;
+  text-align: center;
+  background: #111;
+  color: white;
+}
