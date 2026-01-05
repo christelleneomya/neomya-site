@@ -1,12 +1,19 @@
 {
+  "hero_title": "L’intelligence conversationnelle au service de vos résidences seniors",
+  "hero_subtitle": "Automatisez la gestion des services, fiabilisez la facturation et libérez du temps humain.",
+  "bullet_1": "-50% de tâches administratives liées aux services",
+  "bullet_2": "Prestataires + ERP connectés, zéro ressaisie",
+  "bullet_3": "Catalogue de services enrichi = revenus & satisfaction",
+  "hero_button": "Demander une démo",
+
+  "solution_title": "Solution",
+  "solution_text": "Une interface unique pour connecter résidence, prestataires et ERP",
+
+  "results_title": "Résultats",
+  "results_text": "Des gains opérationnels et économiques dès les premières semaines\n\nMoins d'administratif, plus d'humain\nNeomya automatise les demandes et le suivi des services.\n👉 Jusqu'à 50% de temps administratif en moins.\n\nUne facturation enfin maîtrisée\nToutes les prestations sont suivies de bout en bout.\n👉 Zéro oubli, zéro ressaisie, zéro perte de revenus.\n\nUn modèle plus rentable\nServices enrichis, ouverts aux seniors du quartier, sans friction.\n👉 De nouveaux revenus sans charge supplémentaire.\n\nVous augmentez la valeur dans vos murs — et au-delà —\nsans complexifier l'exploitation.",
+
   "fonctionnement_title": "Fonctionnement",
   "fonctionnement_text": "Un prompt unique. Des workflows automatiques. Une traçabilité totale.\n\n01 Demande naturelle\nLa demande est faite en langage naturel (texte ou voix)\n\n02 Envoi automatique\nNeomya l'envoie au bon prestataire (SMS/WhatsApp/email/API)\n\n03 Synchronisation ERP\nStatut, suivi et facturation remontent dans l'ERP",
-  "contact_text": "Contactez-nous à christelle@neomya.io",
-  "results_title": "Résultats",
-  "solution_title": "Solution",
-  "solution_text": "Automatisez la gestion des services, fiabilisez la facturation et libérez du temps humain.\n\n–50% de tâches administratives liées aux services\nPrestataires + ERP connectés, zéro ressaisie\nCatalogue de services enrichi = revenus & satisfaction",
-  "hero_title": "Neomya",
-  "results_text": "Des gains opérationnels et économiques dès les premières semaines\n\nMoins d'administratif, plus d'humain\nNeomya automatise les demandes et le suivi des services.\n👉 Jusqu'à 50% de temps administratif en moins.\n\nUne facturation enfin maîtrisée\nToutes les prestations sont suivies de bout en bout.\n👉 Zéro oubli, zéro ressaisie, zéro perte de revenus.\n\nUn modèle plus rentable\nServices enrichis, ouverts aux seniors du quartier, sans friction.\n👉 De nouveaux revenus sans charge supplémentaire.\n\nVous augmentez la valeur dans vos murs — et au-delà —\nsans complexifier l'exploitation.",
-  "hero_button": "Demander une démo",
-  "hero_subtitle": "L'intelligence conversationnelle au service de vos résidences seniors"
+
+  "contact_text": "Contactez-nous à christelle@neomya.io"
 }
