@@ -4,79 +4,366 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Neomya</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
+  <!-- Quicksand (comme Base44) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Netlify Identity (pour /admin) -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 
 <body>
 
+  <!-- HEADER -->
   <header class="header">
-    <div class="container">
-      <h1 id="hero_title">Neomya</h1>
-      <p id="hero_subtitle">Votre phrase de valeur ici</p>
-      <a id="hero_button" class="btn" href="#contact">Demander une démo</a>
+    <div class="container header-inner">
+      <a class="brand" href="#top">
+        <img src="assets/logo_color_horiz.png" alt="Neomya" class="logo">
+      </a>
+
+      <nav class="nav">
+        <a href="#solution">Solution</a>
+        <a href="#resultats">Résultats</a>
+        <a href="#fonctionnement">Fonctionnement</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <a class="btn btn-primary btn-small" href="#demo">Demander une démo</a>
     </div>
   </header>
 
-  <main class="container">
-    <section id="solution">
-      <h2 id="solution_title">Solution</h2>
-      <p id="solution_text">Explique ici ce que fait ton produit.</p>
-    </section>
+  <!-- HERO -->
+  <main id="top" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-left">
+        <h1 id="hero_title" class="hero-title">
+          L’intelligence conversationnelle au service de vos résidences seniors
+        </h1>
 
-    <section id="results">
-      <h2 id="results_title">Résultats</h2>
-      <p id="results_text">Explique les bénéfices ou chiffres.</p>
-    </section>
+        <p id="hero_subtitle" class="hero-subtitle">
+          Automatisez la gestion des services, fiabilisez la facturation et libérez du temps humain.
+        </p>
 
-    <section id="fonctionnement">
-      <h2 id="fonctionnement_title">Fonctionnement</h2>
-      <p id="fonctionnement_text">Décris le fonctionnement en 3 étapes.</p>
-    </section>
+        <ul class="hero-bullets">
+          <li><span class="check"></span> <span id="bullet_1">-50% de tâches administratives liées aux services</span></li>
+          <li><span class="check"></span> <span id="bullet_2">Prestataires + ERP connectés, zéro ressaisie</span></li>
+          <li><span class="check"></span> <span id="bullet_3">Catalogue de services enrichi = revenus & satisfaction</span></li>
+        </ul>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p id="contact_text">Contactez-nous à christelle@neomya.io</p>
-    </section>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#demo">
+            <span id="hero_button">Demander une démo</span>
+            <span class="arrow">→</span>
+          </a>
+          <a class="btn btn-secondary" href="#fonctionnement">Voir comment ça marche</a>
+        </div>
+
+        <p class="hero-note" id="hero_note">Démo 20 min • Sans engagement • Réponse sous 24h</p>
+      </div>
+
+      <!-- Mock UI (remplace l'image Base44) -->
+      <div class="hero-right">
+        <div class="mock-card">
+          <div class="mock-top">
+            <div class="mock-avatar"></div>
+            <div>
+              <div class="mock-title">Neomya</div>
+              <div class="mock-subtitle">Assistant intelligent</div>
+            </div>
+            <span class="mock-badge">No click — just talk</span>
+          </div>
+
+          <div class="mock-bubble bubble-primary">
+            Réserver un repas pour M. Durand et ses 2 enfants dimanche midi
+          </div>
+
+          <div class="mock-bubble bubble-light">
+            ✓ Demande envoyée au restaurant partenaire<br>
+            <span class="muted">3 couverts réservés pour dimanche 12h30</span><br>
+            <span class="success">Confirmé • Facturé automatiquement</span>
+          </div>
+
+          <div class="mock-bubble bubble-primary">
+            Faire intervenir un plombier demain matin appt 12
+          </div>
+
+          <div class="mock-bubble bubble-light">
+            ✓ Intervention planifiée<br>
+            <span class="muted">Plombier Dupont confirmé demain 9h-11h</span><br>
+            <span class="muted">Synchronisé avec votre ERP</span>
+          </div>
+
+          <div class="mock-input">Votre demande en langage naturel…</div>
+        </div>
+      </div>
+    </div>
   </main>
 
+  <!-- SOLUTION -->
+  <section id="solution" class="section section-soft">
+    <div class="container center">
+      <h2 class="section-title" id="solution_title">Une interface unique pour connecter résidence, prestataires et ERP</h2>
+
+      <div class="cards-4">
+        <div class="card">
+          <div class="icon">💬</div>
+          <h3>Interface conversationnelle</h3>
+          <p>no click — just talk</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🧠</div>
+          <h3>Catalogue intelligent</h3>
+          <p>Prestataires locaux + partenaires nationaux</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🔗</div>
+          <h3>Intégration ERP</h3>
+          <p>Traçabilité + facturation fiabilisées</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">📊</div>
+          <h3>Tableau de bord</h3>
+          <p>Suivi en temps réel + statuts</p>
+        </div>
+      </div>
+
+      <div class="dashboard">
+        <div class="dash-item">
+          <div class="dash-label">Demandes aujourd’hui</div>
+          <div class="dash-value">24</div>
+          <div class="dash-sub success">+12% vs hier</div>
+        </div>
+        <div class="dash-item">
+          <div class="dash-label">Temps moyen</div>
+          <div class="dash-value">2min</div>
+          <div class="dash-sub muted">traitement auto</div>
+        </div>
+        <div class="dash-item">
+          <div class="dash-label">Prestataires actifs</div>
+          <div class="dash-value">18</div>
+          <div class="dash-sub muted">locaux + nationaux</div>
+        </div>
+        <div class="dash-item">
+          <div class="dash-label">Facturation auto</div>
+          <div class="dash-value success">100%</div>
+          <div class="dash-sub muted">synchronisée ERP</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTATS -->
+  <section id="resultats" class="section">
+    <div class="container center">
+      <h2 class="section-title" id="resultats_title">Des gains opérationnels et économiques dès les premières semaines</h2>
+
+      <div class="cards-3">
+        <div class="card card-blue">
+          <div class="icon-box">🕒</div>
+          <h3>Moins d’administratif, plus d’humain</h3>
+          <p>Neomya automatise les demandes et le suivi des services.</p>
+          <p class="highlight">Jusqu’à 50% de temps administratif en moins.</p>
+        </div>
+
+        <div class="card card-green">
+          <div class="icon-box">🧾</div>
+          <h3>Une facturation enfin maîtrisée</h3>
+          <p>Toutes les prestations sont suivies de bout en bout.</p>
+          <p class="highlight">Zéro oubli, zéro ressaisie, zéro perte de revenus.</p>
+        </div>
+
+        <div class="card card-gray">
+          <div class="icon-box">📈</div>
+          <h3>Un modèle plus rentable</h3>
+          <p>Services enrichis, ouverts aux seniors du quartier, sans friction.</p>
+          <p class="highlight">De nouveaux revenus sans charge supplémentaire.</p>
+        </div>
+      </div>
+
+      <div class="big-quote">
+        Vous augmentez la valeur dans vos murs — et au-delà — <span>sans complexifier l’exploitation.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FONCTIONNEMENT -->
+  <section id="fonctionnement" class="section section-soft">
+    <div class="container center">
+      <h2 class="section-title" id="fonctionnement_title">Un prompt unique. Des workflows automatiques. Une traçabilité totale.</h2>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <div class="step-icon">🎤</div>
+          <h3>Demande naturelle</h3>
+          <p>La demande est faite en langage naturel (texte ou voix)</p>
+        </div>
+
+        <div class="step">
+          <div class="step-num">02</div>
+          <div class="step-icon">✈️</div>
+          <h3>Envoi automatique</h3>
+          <p>Neomya l’envoie au bon prestataire (SMS/WhatsApp/email/API)</p>
+        </div>
+
+        <div class="step">
+          <div class="step-num">03</div>
+          <div class="step-icon">🗄️</div>
+          <h3>Synchronisation ERP</h3>
+          <p>Statut, suivi et facturation remontent dans l’ERP</p>
+        </div>
+      </div>
+
+      <div class="examples">
+        <div class="examples-title">Exemples de demandes</div>
+        <div class="example-row">Réserver un repas pour M. Durand et ses 2 enfants.</div>
+        <div class="example-row">Commander une baguette et un croissant pour Mme Martin.</div>
+        <div class="example-row">Faire intervenir un plombier demain matin.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section">
+    <div class="container center">
+      <h2 class="section-title">Simple à déployer. Simple à utiliser. Sécurisé.</h2>
+
+      <div class="pills">
+        <span class="pill">⚡ Mise en place rapide</span>
+        <span class="pill">🔗 Compatible avec vos outils</span>
+        <span class="pill">🛡️ Traçabilité & sécurité</span>
+      </div>
+
+      <div class="faq">
+        <details class="faq-item">
+          <summary>Faut-il changer d’ERP ?</summary>
+          <p>Non, Neomya s’intègre à votre existant.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Les prestataires doivent-ils installer un outil ?</summary>
+          <p>Non, ils reçoivent les demandes via leurs canaux habituels.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Est-ce compliqué pour les équipes ?</summary>
+          <p>Non, la demande se fait en langage naturel, comme un message.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEMO -->
+  <section id="demo" class="section section-soft">
+    <div class="container center">
+      <h2 class="section-title">Demandez votre démo Neomya</h2>
+      <p class="section-subtitle">En 20 minutes, découvrez comment automatiser vos services et fiabiliser votre facturation.</p>
+
+      <form class="demo-form" name="demo" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="demo" />
+
+        <div class="form-grid">
+          <div>
+            <label>Prénom *</label>
+            <input name="prenom" placeholder="Jean" required>
+          </div>
+          <div>
+            <label>Nom *</label>
+            <input name="nom" placeholder="Dupont" required>
+          </div>
+          <div>
+            <label>Entreprise / Groupe *</label>
+            <input name="entreprise" placeholder="Nom de votre entreprise" required>
+          </div>
+          <div>
+            <label>Fonction</label>
+            <select name="fonction">
+              <option>Sélectionnez</option>
+              <option>Direction</option>
+              <option>Exploitation</option>
+              <option>Finance</option>
+              <option>DSI</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div>
+            <label>Email *</label>
+            <input type="email" name="email" placeholder="jean.dupont@entreprise.com" required>
+          </div>
+          <div>
+            <label>Téléphone</label>
+            <input name="telephone" placeholder="06 12 34 56 78">
+          </div>
+          <div class="full">
+            <label>Nombre de résidences</label>
+            <select name="residences">
+              <option>Sélectionnez</option>
+              <option>1 résidence</option>
+              <option>2–10 résidences</option>
+              <option>10+ résidences</option>
+            </select>
+          </div>
+          <div class="full checkbox-row">
+            <input type="checkbox" id="estimation" name="estimation">
+            <label for="estimation">Je souhaite une estimation personnalisée des gains potentiels</label>
+          </div>
+        </div>
+
+        <button class="btn btn-primary btn-full" type="submit">
+          Demander une démo <span class="arrow">→</span>
+        </button>
+
+        <div class="form-badges">
+          <span>⏱ Réponse sous 24h</span>
+          <span>✅ Aucun engagement</span>
+          <span>🛡 Données confidentielles</span>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="footer">
-    <div class="container">
-      <small>© <span id="footer_year"></span> Neomya</small>
+    <div class="container footer-inner">
+      <img src="assets/symbol_color.png" alt="" class="footer-mark">
+      <div class="footer-text">© <span id="footer_year"></span> Neomya • Smart care. Human touch.</div>
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script>
-  document.getElementById("footer_year").textContent = new Date().getFullYear();
+    document.getElementById("footer_year").textContent = new Date().getFullYear();
 
-  async function loadContent() {
-    const res = await fetch("/content/homepage.json");
-    const data = await res.json();
+    async function loadContent() {
+      const res = await fetch("/content/homepage.json");
+      const data = await res.json();
 
-    for (const key in data) {
-      const el = document.getElementById(key);
-      if (el) el.textContent = data[key];
-    }
-
-    const btn = document.getElementById("hero_button");
-    if (btn) btn.textContent = data.hero_button;
-  }
-
-  loadContent();
-</script>
-
-<script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
+      for (const key in data) {
+        const el = document.getElementById(key);
+        if (el) el.textContent = data[key];
       }
-    });
-  }
-</script>
-  
+    }
+    loadContent();
+  </script>
+
+  <!-- Netlify identity init -->
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+      window.netlifyIdentity.init();
+    }
+  </script>
+
 </body>
 </html>
