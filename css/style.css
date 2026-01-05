@@ -34,19 +34,36 @@ img { max-width: 100%; display: block; }
 .header-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   height: 78px;
-}
-.logo { height: 32px; }
-
-.nav {
-  display: flex;
   gap: 28px;
-  font-weight: 600;
+}
+
+/* logo à gauche */
+.brand {
+  flex: 0 0 auto;
+}
+
+.logo {
+  height: 32px;
+}
+
+/* menu centré */
+.nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 38px;
+  font-weight: 700;
   color: #0b1f3a;
 }
 .nav a { opacity: 0.9; }
 .nav a:hover { opacity: 1; }
+
+/* bouton à droite */
+.header-inner .btn {
+  flex: 0 0 auto;
+  margin-right: 6px;
+}
 
 /* -----------------------------
    BUTTONS
