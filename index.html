@@ -414,6 +414,17 @@
       window.netlifyIdentity.init();
     }
   </script>
+<!-- Netlify form detection fallback -->
+<form name="demo" netlify netlify-honeypot="bot-field" hidden>
+  <input type="text" name="prenom" />
+  <input type="text" name="nom" />
+  <input type="text" name="entreprise" />
+  <input type="text" name="fonction" />
+  <input type="email" name="email" />
+  <input type="text" name="telephone" />
+  <input type="text" name="residences" />
+  <input type="checkbox" name="estimation" />
+</form>
 
 </body>
 </html>
