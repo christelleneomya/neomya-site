@@ -204,32 +204,59 @@
       <div class="steps">
         <div class="step">
           <div class="step-num">01</div>
-          <div class="step-icon">🎤</div>
+          <div class="step-icon">
+  <img src="assets/icons/mic.svg" alt="micro">
+</div>
           <h3>Demande naturelle</h3>
           <p>La demande est faite en langage naturel (texte ou voix)</p>
         </div>
 
         <div class="step">
           <div class="step-num">02</div>
-          <div class="step-icon">✈️</div>
+          <div class="step-icon">
+  <img src="assets/icons/send.svg" alt="envoi">
+</div>
+
           <h3>Envoi automatique</h3>
           <p>Neomya l’envoie au bon prestataire (SMS/WhatsApp/email/API)</p>
         </div>
 
         <div class="step">
           <div class="step-num">03</div>
-          <div class="step-icon">🗄️</div>
+          <div class="step-icon">
+  <img src="assets/icons/database.svg" alt="erp">
+</div>
+
           <h3>Synchronisation ERP</h3>
           <p>Statut, suivi et facturation remontent dans l’ERP</p>
         </div>
       </div>
 
       <div class="examples">
-        <div class="examples-title">Exemples de demandes</div>
-        <div class="example-row">Réserver un repas pour M. Durand et ses 2 enfants.</div>
-        <div class="example-row">Commander une baguette et un croissant pour Mme Martin.</div>
-        <div class="example-row">Faire intervenir un plombier demain matin.</div>
-      </div>
+  <div class="examples-title">Exemples de demandes</div>
+
+  <div class="example-row">
+    <span class="example-mic">
+      <img src="assets/icons/mic.svg" alt="micro">
+    </span>
+    <span>Réserver un repas pour M. Durand et ses 2 enfants.</span>
+  </div>
+
+  <div class="example-row">
+    <span class="example-mic">
+      <img src="assets/icons/mic.svg" alt="micro">
+    </span>
+    <span>Commander une baguette et un croissant pour Mme Martin.</span>
+  </div>
+
+  <div class="example-row">
+    <span class="example-mic">
+      <img src="assets/icons/mic.svg" alt="micro">
+    </span>
+    <span>Faire intervenir un plombier demain matin.</span>
+  </div>
+</div>
+
     </div>
   </section>
 
@@ -267,8 +294,12 @@
       <h2 class="section-title">Demandez votre démo Neomya</h2>
       <p class="section-subtitle">En 20 minutes, découvrez comment automatiser vos services et fiabiliser votre facturation.</p>
 
-      <form class="demo-form" name="demo" method="POST" data-netlify="true">
+      <form class="demo-form" name="demo" method="POST" data-netlify="true" netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="demo" />
+        
+        <p class="hidden">
+  <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+</p>
 
         <div class="form-grid">
           <div>
@@ -322,10 +353,22 @@
         </button>
 
         <div class="form-badges">
-          <span>⏱ Réponse sous 24h</span>
-          <span>✅ Aucun engagement</span>
-          <span>🛡 Données confidentielles</span>
-        </div>
+  <span class="badge">
+    <img src="assets/icons/clock.svg" alt="">
+    Réponse sous 24h
+  </span>
+
+  <span class="badge">
+    <img src="assets/icons/check.svg" alt="">
+    Aucun engagement
+  </span>
+
+  <span class="badge">
+    <img src="assets/icons/shield.svg" alt="">
+    Données confidentielles
+  </span>
+</div>
+
       </form>
     </div>
   </section>
@@ -347,9 +390,13 @@
       const data = await res.json();
 
       for (const key in data) {
-        const el = document.getElementById(key);
-        if (el) el.textContent = data[key];
-      }
+  const el = document.getElementById(key);
+  if (!el) continue;
+
+  // Permet les retours à la ligne dans les titres (et autres éléments)
+  const value = String(data[key]).replace(/\n/g, "<br>");
+  el.innerHTML = value;
+}
     }
     loadContent();
   </script>
