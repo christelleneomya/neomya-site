@@ -322,7 +322,14 @@
       <h2 class="section-title" id="demo_title"></h2>
       <p class="section-subtitle" id="demo_subtitle"></p>
 
-      <form class="demo-form" name="demo" method="POST" netlify netlify-honeypot="bot-field">
+      <form
+  class="demo-form"
+  name="demo"
+  method="POST"
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+  action="/merci.html"
+>
         <input type="hidden" name="form-name" value="demo" />
 
         <p class="hidden">
