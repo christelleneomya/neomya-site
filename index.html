@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=10001">
 
   <!-- Netlify Identity (pour /admin) -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
@@ -20,286 +20,314 @@
 
   <!-- HEADER -->
   <header class="header">
-  <div class="container header-inner">
+    <div class="container header-inner">
 
-    <div class="brand">
-      <a href="#top">
-        <img src="assets/logo_color_horiz.png" alt="Neomya" class="logo">
-      </a>
+      <div class="brand">
+        <a href="#top">
+          <img src="assets/logo_color_horiz.png" alt="Neomya" class="logo">
+        </a>
+      </div>
+
+      <nav class="nav js-nav">
+        <a href="#solution">Solution</a>
+        <a href="#benefices">Bénéfices</a>
+        <a href="#fonctionnement">Fonctionnement</a>
+      </nav>
+
+      <a class="btn btn-primary btn-small" href="#demo">Demander une démo</a>
+
     </div>
-
-    <nav class="nav">
-      <a href="#solution">Solution</a>
-      <a href="#resultats">Résultats</a>
-      <a href="#fonctionnement">Fonctionnement</a>
-    </nav>
-
-    <a class="btn btn-primary btn-small" href="#demo">Demander une démo</a>
-
-  </div>
-</header>
+  </header>
 
   <!-- HERO -->
   <main id="top" class="hero">
     <div class="container hero-grid">
       <div class="hero-left">
-        <h1 id="hero_title" class="hero-title">
-          L’intelligence conversationnelle au service de vos résidences seniors
-        </h1>
+        <h1 id="hero_title" class="hero-title"></h1>
 
-        <p id="hero_subtitle" class="hero-subtitle">
-          Automatisez la gestion des services, fiabilisez la facturation et libérez du temps humain.
-        </p>
+        <p id="hero_p1" class="hero-subtitle"></p>
+        <p id="hero_p2" class="hero-subtitle"></p>
+        <p id="hero_p3" class="hero-subtitle"></p>
 
-        <ul class="hero-bullets">
-          <li><span class="check"></span> <span id="bullet_1">-50% de tâches administratives liées aux services</span></li>
-          <li><span class="check"></span> <span id="bullet_2">Prestataires + ERP connectés, zéro ressaisie</span></li>
-          <li><span class="check"></span> <span id="bullet_3">Catalogue de services enrichi = revenus & satisfaction</span></li>
-        </ul>
+        <div class="hero-linkline">
+          <span class="arrow-link">→</span>
+          <span id="hero_linkline"></span>
+        </div>
 
         <div class="hero-cta">
           <a class="btn btn-primary" href="#demo">
-            <span id="hero_button">Demander une démo</span>
+            <span id="hero_button"></span>
             <span class="arrow">→</span>
           </a>
-          <a class="btn btn-secondary" href="#fonctionnement">Voir comment ça marche</a>
+          <a class="btn btn-secondary" href="#fonctionnement" id="hero_secondary"></a>
         </div>
 
-        <p class="hero-note" id="hero_note">Démo 20 min • Sans engagement • Réponse sous 24h</p>
+        <p class="hero-note" id="hero_note"></p>
       </div>
 
-      <!-- Mock UI (remplace l'image Base44) -->
+      <!-- Mock UI -->
       <div class="hero-right">
-        <div class="mock-card">
-          <div class="mock-top">
-            <div class="mock-avatar"></div>
+        <div class="chat-card">
+          <div class="chat-top">
+            <img src="assets/symbol_color.png" class="chat-logo" alt="">
             <div>
-              <div class="mock-title">Neomya</div>
-              <div class="mock-subtitle">Assistant intelligent</div>
+              <div class="chat-title" id="mock_header_title"></div>
+              <div class="chat-subtitle" id="mock_header_subtitle"></div>
             </div>
-            <span class="mock-badge">No click — just talk</span>
           </div>
 
-          <div class="mock-bubble bubble-primary">
-            Réserver un repas pour M. Durand et ses 2 enfants dimanche midi
+          <div class="chat-bubble chat-user" id="mock_user_message"></div>
+
+          <div class="chat-bubble chat-bot">
+            <div class="chat-bot-title" id="mock_summary_title"></div>
+            <ul class="chat-list">
+              <li><span class="dot"></span> <span id="mock_b1"></span></li>
+              <li><span class="dot"></span> <span id="mock_b2"></span></li>
+              <li><span class="dot"></span> <span id="mock_b3"></span></li>
+            </ul>
           </div>
 
-          <div class="mock-bubble bubble-light">
-            ✓ Demande envoyée au restaurant partenaire<br>
-            <span class="muted">3 couverts réservés pour dimanche 12h30</span><br>
-            <span class="success">Confirmé • Facturé automatiquement</span>
+          <div class="chat-bubble chat-bot" id="mock_confirm"></div>
+
+          <div class="chat-inputbar">
+            <div class="chat-field">
+              <span class="chat-placeholder" id="mock_placeholder"></span>
+              <span class="chat-send">
+                <img src="assets/icons/send.svg" alt="envoyer">
+              </span>
+            </div>
+
+            <span class="chat-mic">
+              <img src="assets/icons/mic.svg" alt="micro">
+            </span>
           </div>
 
-          <div class="mock-bubble bubble-primary">
-            Faire intervenir un plombier demain matin appt 12
-          </div>
-
-          <div class="mock-bubble bubble-light">
-            ✓ Intervention planifiée<br>
-            <span class="muted">Plombier Dupont confirmé demain 9h-11h</span><br>
-            <span class="muted">Synchronisé avec votre ERP</span>
-          </div>
-
-          <div class="mock-input">Votre demande en langage naturel…</div>
         </div>
       </div>
+
     </div>
   </main>
 
   <!-- SOLUTION -->
-  <section id="solution" class="section section-soft">
+  <section id="solution" class="section">
+    <div class="container">
+      <h2 class="section-title center" id="assistant_title"></h2>
+
+      <div class="cards-3 assistant-cards">
+
+        <div class="card card-soft mint">
+          <div class="card-top">
+            <div class="num">01</div>
+            <div class="top-right">
+              <img src="assets/icons/chat.svg" class="assistant-icon" alt="">
+            </div>
+          </div>
+          <h3 id="assistant_1_title"></h3>
+          <p id="assistant_1_text"></p>
+        </div>
+
+        <div class="card card-soft violet">
+          <div class="card-top">
+            <div class="num">02</div>
+            <div class="top-right">
+              <img src="assets/icons/send.svg" class="assistant-icon" alt="">
+            </div>
+          </div>
+          <h3 id="assistant_2_title"></h3>
+          <p id="assistant_2_text"></p>
+        </div>
+
+        <div class="card card-soft gray">
+          <div class="card-top">
+            <div class="num">03</div>
+            <div class="top-right">
+              <img src="assets/icons/link.svg" class="assistant-icon" alt="">
+            </div>
+          </div>
+          <h3 id="assistant_3_title"></h3>
+          <p id="assistant_3_text"></p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ECOSYSTEME -->
+  <section id="ecosysteme" class="section">
     <div class="container center">
-      <h2 class="section-title" id="solution_title">Une interface unique pour connecter résidence, prestataires et ERP</h2>
+      <h2 class="section-title" id="ecosystem_title"></h2>
+      <p class="section-subtitle" id="ecosystem_subtitle"></p>
 
-      <div class="cards-4">
-        <div class="card">
-          <div class="icon">💬</div>
-          <h3>Interface conversationnelle</h3>
-          <p>no click — just talk</p>
-        </div>
-
-        <div class="card">
-          <div class="icon">🧠</div>
-          <h3>Catalogue intelligent</h3>
-          <p>Prestataires locaux + partenaires nationaux</p>
-        </div>
-
-        <div class="card">
-          <div class="icon">🔗</div>
-          <h3>Intégration ERP</h3>
-          <p>Traçabilité + facturation fiabilisées</p>
-        </div>
-
-        <div class="card">
-          <div class="icon">📊</div>
-          <h3>Tableau de bord</h3>
-          <p>Suivi en temps réel + statuts</p>
+      <div class="eco-visual" aria-hidden="true">
+        <div class="eco-hub">
+          <img src="assets/logo_color.png" alt="" class="eco-hub-logo">
         </div>
       </div>
 
-      <div class="dashboard">
-        <div class="dash-item">
-          <div class="dash-label">Demandes aujourd’hui</div>
-          <div class="dash-value">24</div>
-          <div class="dash-sub success">+12% vs hier</div>
+      <div class="eco-cards-grid">
+        <div class="eco-card">
+          <div class="eco-icon"><img src="assets/icons/eco-residences.png" alt=""></div>
+          <h3 id="eco_1_title"></h3>
+          <p id="eco_1_text"></p>
         </div>
-        <div class="dash-item">
-          <div class="dash-label">Temps moyen</div>
-          <div class="dash-value">2min</div>
-          <div class="dash-sub muted">traitement auto</div>
+
+        <div class="eco-card">
+          <div class="eco-icon"><img src="assets/icons/eco-prestataires.png" alt=""></div>
+          <h3 id="eco_2_title"></h3>
+          <p id="eco_2_text"></p>
         </div>
-        <div class="dash-item">
-          <div class="dash-label">Prestataires actifs</div>
-          <div class="dash-value">18</div>
-          <div class="dash-sub muted">locaux + nationaux</div>
+
+        <div class="eco-card">
+          <div class="eco-icon"><img src="assets/icons/eco-familles.png" alt=""></div>
+          <h3 id="eco_3_title"></h3>
+          <p id="eco_3_text"></p>
         </div>
-        <div class="dash-item">
-          <div class="dash-label">Facturation auto</div>
-          <div class="dash-value success">100%</div>
-          <div class="dash-sub muted">synchronisée ERP</div>
+
+        <div class="eco-card">
+          <div class="eco-icon"><img src="assets/icons/eco-quartier.png" alt=""></div>
+          <h3 id="eco_4_title"></h3>
+          <p id="eco_4_text"></p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- RESULTATS -->
-  <section id="resultats" class="section">
-    <div class="container center">
-      <h2 class="section-title" id="resultats_title">Des gains opérationnels et économiques dès les premières semaines</h2>
-
-      <div class="cards-3">
-        <div class="card card-blue">
-          <div class="icon-box">🕒</div>
-          <h3>Moins d’administratif, plus d’humain</h3>
-          <p>Neomya automatise les demandes et le suivi des services.</p>
-          <p class="highlight">Jusqu’à 50% de temps administratif en moins.</p>
-        </div>
-
-        <div class="card card-green">
-          <div class="icon-box">🧾</div>
-          <h3>Une facturation enfin maîtrisée</h3>
-          <p>Toutes les prestations sont suivies de bout en bout.</p>
-          <p class="highlight">Zéro oubli, zéro ressaisie, zéro perte de revenus.</p>
-        </div>
-
-        <div class="card card-gray">
-          <div class="icon-box">📈</div>
-          <h3>Un modèle plus rentable</h3>
-          <p>Services enrichis, ouverts aux seniors du quartier, sans friction.</p>
-          <p class="highlight">De nouveaux revenus sans charge supplémentaire.</p>
-        </div>
+  <!-- TABLEAU DE BORD -->
+  <section id="dashboard" class="section">
+    <div class="container">
+      <div class="dashboard-head">
+        <h2 class="section-title with-icon">
+          <span class="title-icon title-icon-graphique" aria-hidden="true"></span>
+          <span id="dashboard_title"></span>
+        </h2>
+        <p class="section-subtitle" id="dashboard_text"></p>
       </div>
 
-      <div class="big-quote">
-        Vous augmentez la valeur dans vos murs — et au-delà — <span>sans complexifier l’exploitation.</span>
-      </div>
+      <figure class="dash-figure">
+        <img src="assets/dashboard.png" alt="Tableau de bord Neomya" class="dash-img">
+      </figure>
     </div>
   </section>
 
-  <!-- FONCTIONNEMENT -->
-  <section id="fonctionnement" class="section section-soft">
-    <div class="container center">
-      <h2 class="section-title" id="fonctionnement_title">Un prompt unique. Des workflows automatiques. Une traçabilité totale.</h2>
+  <!-- BENEFICES -->
+  <section id="benefices" class="section">
+    <div class="container">
+      <h2 class="section-title center" id="benefits_title"></h2>
 
-      <div class="steps">
-        <div class="step">
-          <div class="step-num">01</div>
-          <div class="step-icon">
-  <img src="assets/icons/mic.svg" alt="micro">
-</div>
-          <h3>Demande naturelle</h3>
-          <p>La demande est faite en langage naturel (texte ou voix)</p>
+      <div class="cards-2x2">
+        <div class="card benefit-card">
+          <div class="benefit-top">
+            <span class="benefit-ico benefit-ico-mint"></span>
+            <span class="tag mint" id="b1_tag"></span>
+          </div>
+          <h3 id="b1_title"></h3>
+          <p id="b1_text"></p>
         </div>
 
-        <div class="step">
-          <div class="step-num">02</div>
-          <div class="step-icon">
-  <img src="assets/icons/send.svg" alt="envoi">
-</div>
-
-          <h3>Envoi automatique</h3>
-          <p>Neomya l’envoie au bon prestataire (SMS/WhatsApp/email/API)</p>
+        <div class="card benefit-card">
+          <div class="benefit-top">
+            <span class="benefit-ico benefit-ico-violet"></span>
+            <span class="tag violet" id="b2_tag"></span>
+          </div>
+          <h3 id="b2_title"></h3>
+          <p id="b2_text"></p>
         </div>
 
-        <div class="step">
-          <div class="step-num">03</div>
-          <div class="step-icon">
-  <img src="assets/icons/database.svg" alt="erp">
-</div>
+        <div class="card benefit-card">
+          <div class="benefit-top">
+            <span class="benefit-ico benefit-ico-gray"></span>
+            <span class="tag gray" id="b3_tag"></span>
+          </div>
+          <h3 id="b3_title"></h3>
+          <p id="b3_text"></p>
+        </div>
 
-          <h3>Synchronisation ERP</h3>
-          <p>Statut, suivi et facturation remontent dans l’ERP</p>
+        <div class="card benefit-card">
+          <div class="benefit-top">
+            <span class="benefit-ico benefit-ico-mint"></span>
+            <span class="tag mint" id="b4_tag"></span>
+          </div>
+          <h3 id="b4_title"></h3>
+          <p id="b4_text"></p>
         </div>
       </div>
 
-      <div class="examples">
-  <div class="examples-title">Exemples de demandes</div>
-
-  <div class="example-row">
-    <span class="example-mic">
-      <img src="assets/icons/mic.svg" alt="micro">
-    </span>
-    <span>Réserver un repas pour M. Durand et ses 2 enfants.</span>
-  </div>
-
-  <div class="example-row">
-    <span class="example-mic">
-      <img src="assets/icons/mic.svg" alt="micro">
-    </span>
-    <span>Commander une baguette et un croissant pour Mme Martin.</span>
-  </div>
-
-  <div class="example-row">
-    <span class="example-mic">
-      <img src="assets/icons/mic.svg" alt="micro">
-    </span>
-    <span>Faire intervenir un plombier demain matin.</span>
-  </div>
-</div>
-
+      <div class="benefits-footer" id="benefits_footer"></div>
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section id="faq" class="section">
-    <div class="container center">
-      <h2 class="section-title">Simple à déployer. Simple à utiliser. Sécurisé.</h2>
+  <!-- MISE EN OEUVRE -->
+  <section id="fonctionnement" class="section">
+    <div class="container">
+      <h2 class="section-title center" id="implementation_title"></h2>
 
-      <div class="pills">
-        <span class="pill">⚡ Mise en place rapide</span>
-        <span class="pill">🔗 Compatible avec vos outils</span>
-        <span class="pill">🛡️ Traçabilité & sécurité</span>
+      <div class="implementation-grid">
+
+        <div class="impl-card impl-card-prereq">
+          <h3 class="impl-title" id="prereq_title"></h3>
+          <ul class="impl-checklist">
+            <li><span class="impl-check" aria-hidden="true"></span><span id="prereq_1"></span></li>
+            <li><span class="impl-check" aria-hidden="true"></span><span id="prereq_2"></span></li>
+            <li><span class="impl-check" aria-hidden="true"></span><span id="prereq_3"></span></li>
+            <li><span class="impl-check" aria-hidden="true"></span><span id="prereq_4"></span></li>
+          </ul>
+        </div>
+
+        <div class="impl-card impl-card-steps">
+          <h3 class="impl-title" id="deploy_title"></h3>
+
+          <div class="impl-steps">
+            <div class="impl-step">
+              <span class="impl-step-ico"><img src="assets/icons/catalogue.png" alt=""></span>
+              <div class="impl-step-text">
+                <div class="impl-step-name" id="deploy_1_title"></div>
+                <div class="impl-step-desc" id="deploy_1_text"></div>
+              </div>
+            </div>
+
+            <div class="impl-step">
+              <span class="impl-step-ico violet"><img src="assets/icons/link.svg" alt=""></span>
+              <div class="impl-step-text">
+                <div class="impl-step-name" id="deploy_2_title"></div>
+                <div class="impl-step-desc" id="deploy_2_text"></div>
+              </div>
+            </div>
+
+            <div class="impl-step">
+              <span class="impl-step-ico gray"><img src="assets/icons/groupe.png" alt=""></span>
+              <div class="impl-step-text">
+                <div class="impl-step-name" id="deploy_3_title"></div>
+                <div class="impl-step-desc" id="deploy_3_text"></div>
+              </div>
+            </div>
+
+            <div class="impl-step">
+              <span class="impl-step-ico violet"><img src="assets/icons/fusee.png" alt=""></span>
+              <div class="impl-step-text">
+                <div class="impl-step-name" id="deploy_5_title"></div>
+                <div class="impl-step-desc" id="deploy_5_text"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
 
-      <div class="faq">
-        <details class="faq-item">
-          <summary>Faut-il changer d’ERP ?</summary>
-          <p>Non, Neomya s’intègre à votre existant.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Les prestataires doivent-ils installer un outil ?</summary>
-          <p>Non, ils reçoivent les demandes via leurs canaux habituels.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Est-ce compliqué pour les équipes ?</summary>
-          <p>Non, la demande se fait en langage naturel, comme un message.</p>
-        </details>
-      </div>
     </div>
   </section>
 
   <!-- DEMO -->
   <section id="demo" class="section section-soft">
     <div class="container center">
-      <h2 class="section-title">Demandez votre démo Neomya</h2>
-      <p class="section-subtitle">En 20 minutes, découvrez comment automatiser vos services et fiabiliser votre facturation.</p>
+      <h2 class="section-title" id="demo_title"></h2>
+      <p class="section-subtitle" id="demo_subtitle"></p>
 
       <form class="demo-form" name="demo" method="POST" netlify netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="demo" />
-        
+
         <p class="hidden">
-  <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
-</p>
+          <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+        </p>
 
         <div class="form-grid">
           <div>
@@ -353,22 +381,10 @@
         </button>
 
         <div class="form-badges">
-  <span class="badge">
-    <img src="assets/icons/clock.svg" alt="">
-    Réponse sous 24h
-  </span>
-
-  <span class="badge">
-    <img src="assets/icons/check.svg" alt="">
-    Aucun engagement
-  </span>
-
-  <span class="badge">
-    <img src="assets/icons/shield.svg" alt="">
-    Données confidentielles
-  </span>
-</div>
-
+          <span class="badge"><img src="assets/icons/clock.svg" alt="">Réponse sous 24h</span>
+          <span class="badge"><img src="assets/icons/check.svg" alt="">Aucun engagement</span>
+          <span class="badge"><img src="assets/icons/shield.svg" alt="">Données confidentielles</span>
+        </div>
       </form>
     </div>
   </section>
@@ -386,19 +402,62 @@
     document.getElementById("footer_year").textContent = new Date().getFullYear();
 
     async function loadContent() {
-      const res = await fetch("/content/homepage.json");
-      const data = await res.json();
+      try {
+        const res = await fetch("content/homepage.json", { cache: "no-store" });
+        if (!res.ok) throw new Error("Fetch homepage.json failed: " + res.status);
+        const data = await res.json();
 
-      for (const key in data) {
-  const el = document.getElementById(key);
-  if (!el) continue;
-
-  // Permet les retours à la ligne dans les titres (et autres éléments)
-  const value = String(data[key]).replace(/\n/g, "<br>");
-  el.innerHTML = value;
-}
+        for (const key in data) {
+          const el = document.getElementById(key);
+          if (!el) continue;
+          const value = String(data[key]).replace(/\n/g, "<br>");
+          el.innerHTML = value;
+        }
+      } catch (err) {
+        console.error(err);
+      }
     }
     loadContent();
+  </script>
+
+  <!-- Smooth scroll menu (seulement la nav) -->
+  <script>
+    (function () {
+      const nav = document.querySelector(".js-nav");
+      if (!nav) return;
+
+      function headerOffset() {
+        const header = document.querySelector(".header");
+        const h = header ? header.offsetHeight : 0;
+        return h + 24;
+      }
+
+      function smoothScrollTo(hash) {
+        const target = document.querySelector(hash);
+        if (!target) return;
+        const top = target.getBoundingClientRect().top + window.scrollY - headerOffset();
+        window.scrollTo({ top, behavior: "smooth" });
+      }
+
+      nav.addEventListener("click", (e) => {
+        const a = e.target.closest('a[href^="#"]');
+        if (!a) return;
+
+        const hash = a.getAttribute("href");
+        if (!hash || hash === "#") return;
+
+        e.preventDefault();
+        history.pushState(null, "", hash);
+        smoothScrollTo(hash);
+      });
+
+      window.addEventListener("load", () => {
+        if (location.hash) {
+          const hash = location.hash;
+          setTimeout(() => smoothScrollTo(hash), 50);
+        }
+      });
+    })();
   </script>
 
   <!-- Netlify identity init -->
@@ -414,17 +473,19 @@
       window.netlifyIdentity.init();
     }
   </script>
-<!-- Netlify form detection fallback -->
-<form name="demo" netlify netlify-honeypot="bot-field" hidden>
-  <input type="text" name="prenom" />
-  <input type="text" name="nom" />
-  <input type="text" name="entreprise" />
-  <input type="text" name="fonction" />
-  <input type="email" name="email" />
-  <input type="text" name="telephone" />
-  <input type="text" name="residences" />
-  <input type="checkbox" name="estimation" />
-</form>
+
+  <!-- Netlify form detection fallback -->
+  <form name="demo" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="prenom" />
+    <input type="text" name="nom" />
+    <input type="text" name="entreprise" />
+    <input type="text" name="fonction" />
+    <input type="email" name="email" />
+    <input type="text" name="telephone" />
+    <input type="text" name="residences" />
+    <input type="checkbox" name="estimation" />
+  </form>
 
 </body>
 </html>
+
