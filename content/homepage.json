@@ -1,6 +1,6 @@
 {
   "hero_title": "Développez la<br>performance<br><span class='accent'>de vos résidences<br>senior</span>",
-  "hero_p1": "Soulagez le quotidien de vos collaborateurs en leur offrant un assistant avec lequel ils dialogueront en langage naturel.",
+  "hero_p1": "Facilitez le quotidien de vos collaborateurs en leur offrant un assistant avec lequel ils dialogueront en langage naturel.",
   "hero_p2": "Choisissez les services que vous souhaitez proposer à vos résidents, l'assistant s'occupe des échanges avec les résidents et vos prestataires.",
   "hero_p3": "Notre plate-forme se connecte à votre ERP pour récupérer les données de vos résidences et renseigner toutes les transactions réalisées par l'assistant.",
   "hero_linkline": "Libérez du temps pour être toujours plus proche de vos résidents<br>tout en augmentant la rentabilité de vos résidences !",
@@ -27,7 +27,7 @@
   "assistant_3_text": "L'assistant trace toutes les demandes qui génèrent une transaction financière en étant connecté à votre ERP ou vos outils de gestion.",
 
   "ecosystem_title": "Un écosystème connecté",
-  "ecosystem_subtitle": "Neomya se connecte à votre ERP ou votre système de gestion pour répondre à toutes les demandes de votre écosystème. Il intègre un catalogue de services à destination des résidents, et aussi de prestataires nécessaire au fonctionnement de la résidence.",
+  "ecosystem_subtitle": "Neomya se connecte à votre ERP ou votre système de gestion pour répondre à toutes les demandes de votre écosystème. Il intègre un catalogue de services pour les résidents, et aussi une liste de prestataires nécessaires au fonctionnement de la résidence.",
   "eco_1_title": "Résidences",
   "eco_1_text": "Les employés de la résidence peuvent solliciter l'assistant à tout moment pour leur permettre d'économiser du temps et les décharger de certaines tâches notamment administratives.",
   "eco_2_title": "Prestataires",

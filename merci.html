@@ -3,10 +3,86 @@
 <head>
   <meta charset="utf-8">
   <title>Merci</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    :root {
+      --primary: #4f46e5;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --bg: #f9fafb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+    }
+
+    .card {
+      background: #ffffff;
+      max-width: 480px;
+      width: 100%;
+      padding: 3rem 2.5rem;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+      text-align: center;
+    }
+
+    .icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      margin: 0 0 0.75rem;
+      font-size: 2rem;
+    }
+
+    p {
+      margin: 0 0 2rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    a.button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: var(--primary);
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 999px;
+      font-weight: 500;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    a.button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 20px rgba(79, 70, 229, 0.35);
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Merci 🙏</h1>
-  <p>Votre demande a bien été envoyée. Nous revenons vers vous sous 24h.</p>
-  <a href="/">Retour au site</a>
+  <div class="card">
+    <div class="icon">🙏</div>
+    <h1>Merci !</h1>
+    <p>
+      Votre demande a bien été envoyée.<br>
+      Nous revenons vers vous sous 24h.
+    </p>
+    <a href="/" class="button">Retour au site</a>
+  </div>
 </body>
 </html>
+
